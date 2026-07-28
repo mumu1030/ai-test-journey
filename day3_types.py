@@ -18,4 +18,6 @@ unread_types = [] #准备一个空列表来存储所有未读通知的类型
 for a in notification_response["notification_data"]["items"]:
     if a["is_read"]==False:
         unread_types.append(a["type"])
-print(unread_types) #读通知的类型
+print(unread_types) #直接打印的是列表的的内容读通知的类型
+for t in unread_types: #用for 语句从列表里把每个内容取出来并打印
+    print(t)
