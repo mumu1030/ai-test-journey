@@ -1,0 +1,17 @@
+[
+  {
+    "case_id": "TC002",
+    "status": "fail",
+    "duration": 1.5
+  },
+  {
+    "case_id": "TC003",
+    "status": "fail",
+    "duration": 1.2
+  },
+  {
+    "case_id": "TC005",
+    "status": "fail",
+    "duration": 1.2
+  }
+]

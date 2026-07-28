@@ -1,0 +1,37 @@
+{
+  "name": "登录模块回归测试",
+  "created_at": "2026-07-27T10:43:33.189391",
+  "summary": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "pending": 0,
+    "pass_rate": "100.0%"
+  },
+  "cases": [
+    {
+      "id": "TC001",
+      "title": "用账号密码登录",
+      "priority": "P0",
+      "status": "pass"
+    },
+    {
+      "id": "TC002",
+      "title": "用邮箱登录",
+      "priority": "P1",
+      "status": "pass"
+    },
+    {
+      "id": "TC003",
+      "title": "用微信登录",
+      "priority": "P2",
+      "status": "pass"
+    },
+    {
+      "id": "TC004",
+      "title": "用手机号登录",
+      "priority": "P2",
+      "status": "pass"
+    }
+  ]
+}

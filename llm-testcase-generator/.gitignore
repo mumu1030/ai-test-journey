@@ -1,0 +1,6 @@
+.env
+_pycache_/
+output/
+.vscode/
+.idea/
+#.env 是钥匙，__pycache__/ 是 Python 运行生成的缓存，output/ 是生成的结果文件，都不需要上传
