@@ -46,13 +46,14 @@ class LLMTestCaseGenerator:
         # 比如 "扫码支付_20260727_113000.json"
         # 时间戳的作用：同一天多次生成，文件名不重，不会覆盖旧的
         ts = datetime.now().strftime('%Y%m%d"_%H%M%S')
-        path = f"{output_dir}/{result['feature']}_{ts}.json"
+
+        #存json
+        filename = f"{result['feature']}_{ts}.json"
+        filepath = os.path.join(output_dir,filename)
         # 写入文件
         # json.dump 把 Python 字典变成 JSON 字符串写入文件
         # ensure_ascii=False → 中文正常显示，不变成 \uxxxx 乱码
         # indent=2 → 缩进 2 格，方便人眼看
-        with open(path,"w",encoding="utf-8") as f:
+        with open(filepath,"w",encoding="utf-8") as f:
             json.dump(result,f,ensure_ascii=False, indent=2)
-            print(f"已保存:{path}")
-            return path
-        
+        return filepath

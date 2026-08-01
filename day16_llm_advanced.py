@@ -2,6 +2,8 @@ import requests #导入requests库，发http请求用
 import os 
 import time
 import sys
+from dotenv import load_dotenv #从.env文件加载配置
+load_dotenv()
 
 #======从环境变量取api key
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY") #从环境变量取key

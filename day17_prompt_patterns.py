@@ -4,6 +4,8 @@ import requests #导入requests库，发http请求用，call_llm需要
 import os #读取环境变量api Key
 import time # 429限流sleep等待
 import sys #往sys.path 加路径，实现跨目录导入
+from dotenv import load_dotenv #从.env文件加载配置
+load_dotenv()
 
 #======从环境变量取api key
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY") #从环境变量取key

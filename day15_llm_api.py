@@ -1,5 +1,7 @@
 import requests #导入requests库，发http请求用
 import os 
+from dotenv import load_dotenv #从.env文件加载配置
+load_dotenv()
 
 #======从环境变量取api key
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY") #从环境变量取key
@@ -28,12 +30,8 @@ def call_llm(prompt:str,system:str = "你是一名资深的测试工程师") -> 
     return content
 
 #测试调用
-result = call_llm("请为'用户注册'功能生成3条P0级测试用例,输出Markdown表格")
-print(result)
-
-#保存
-
-with open("test_cases.md","w",encoding="utf-8") as f:
-    f.write(result)
-
-print("测试用例保存到test_cases.md")
+if __name__ == "__main__":
+    result = call_llm("请为'用户注册'功能生成3条P0级测试用例,输出Markdown表格")
+    print(result)
+    with open("test_cases.md","w",encoding="utf-8") as f:
+        f.write(result)
